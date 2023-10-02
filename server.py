@@ -16,10 +16,8 @@ def get_results_from_metaphor(query = ""):
     negator = Negator()
     negated_sentence = negator.negate_sentence(query)
     against_response = metaphor.search( negated_sentence, use_autoprompt = False)
-    print("negated sentence",negated_sentence)
     contents_against_response = against_response.get_contents()
     response = {"for":[],"against":[],"negated_sentence":negated_sentence}
-    # Print content for each result
     for content in contents_for_response.contents:
         htmlContent = content.extract
         soup = BeautifulSoup(htmlContent, 'html.parser')
@@ -47,7 +45,6 @@ def submit():
     if request.method == 'GET':
         
         query = request.args.get('query', '')
-        print("got query", query)
         response = get_results_from_metaphor(query)
 
         return response

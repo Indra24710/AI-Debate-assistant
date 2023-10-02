@@ -1,0 +1,21 @@
+.text-body {
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  height: 500px;
+}
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+.input-wrapper .input-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.listel {
+  max-height: 200px;
+  overflow-y: auto;
+}

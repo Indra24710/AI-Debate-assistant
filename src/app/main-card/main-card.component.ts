@@ -14,7 +14,6 @@ export class MainCardComponent {
   negatedSentence: string = "";
   constructor(private http: HttpClient) {}
 
-  updateText() {}
 
   sendRequest() {
     console.log(this.inputText);
